@@ -2,16 +2,17 @@ package com.rheinenergie.jpa.model;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 @Entity
 public class BetreiberBeziehung  extends AbstractEntity  {
 	
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.LAZY)
 	private Anlage anlage;
 	
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	private Betreiber betreiber;
 	
 	@OneToOne(cascade={CascadeType.PERSIST}, orphanRemoval=true)

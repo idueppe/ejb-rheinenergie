@@ -10,6 +10,9 @@
 		<class>com.rheinenergie.jpa.model.BetreiberBeziehung</class>
 		<class>com.rheinenergie.jpa.model.SonstigeKontakte</class>
 		<class>com.rheinenergie.jpa.model.SonstigePK</class>
+		<class>com.rheinenergie.jpa.model.BetreiberGruppe</class>
+		<class>com.rheinenergie.jpa.model.Kontakt</class>
+		<class>com.rheinenergie.jpa.model.Errichter</class>
 		<shared-cache-mode>NONE</shared-cache-mode>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
@@ -18,12 +21,12 @@
 			<property name="javax.persistence.jdbc.password" value="masterkey" />
 			<!-- EclipseLink should create the database schema automatically -->
 			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
-			<!-- <property name="eclipselink.ddl-generation" value="create-tables" 	/> -->
+<!-- 			<property name="eclipselink.ddl-generation" value="create-tables" 	/> -->
 			<property name="eclipselink.ddl-generation.output-mode"
 				value="database" />
 			<property name="eclipselink.logging.level.sql" value="FINEST" />
 			<property name="eclipselink.logging.parameters" value="true" />
-			<property name="eclipselink.logging.level" value="FINEST" />
+<!-- 			<property name="eclipselink.logging.level" value="FINE" /> -->
 			<!-- <property name="eclipselink.weaving" value="true"/> -->
 			<!-- <property name="eclipselink.weaving.lazy" value="true"/> -->
 			<!-- <property name="eclipselink.cache.shared.default" value="false"/> -->

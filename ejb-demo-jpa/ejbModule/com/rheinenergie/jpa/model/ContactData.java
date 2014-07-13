@@ -8,7 +8,7 @@ public class ContactData {
 	private String webAddress;
 	private String telephone;
 	private String telefax;
-	private String email;
+	private String mobile;
 
 	public String getWebAddress() {
 		return webAddress;
@@ -34,12 +34,12 @@ public class ContactData {
 		this.telefax = telefax;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getMobile() {
+		return mobile;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setMobile(String email) {
+		this.mobile = email;
 	}
 
 }

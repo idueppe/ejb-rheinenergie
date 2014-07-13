@@ -27,7 +27,7 @@ public class JpaTest {
 	@Before
 	public void setUp() {
 		em = emf.createEntityManager();
-		System.out.println(" ============| EM " + em.toString());
+		System.out.println(" || EM " + em.toString());
 	}
 
 	@After
@@ -72,7 +72,7 @@ public class JpaTest {
 
 		em.persist(anlage);
 
-		System.out.println("===================== | PARTNER " + partner);
+		System.out.println("|| PARTNER " + partner);
 
 		txCommit();
 	}
@@ -103,7 +103,7 @@ public class JpaTest {
 
 		BetreiberBeziehung beziehung = anlage.getBetreiberBeziehungen().get(0);
 
-		beziehung.setBetreiber(new Betreiber().withName("Düppe"));
+		beziehung.setBetreiber(new Betreiber().withName("Düppe "+System.currentTimeMillis()));
 
 		Ansprechpartner partner = new Ansprechpartner().withName("Mair");
 		// partner.setBeziehung(beziehung);

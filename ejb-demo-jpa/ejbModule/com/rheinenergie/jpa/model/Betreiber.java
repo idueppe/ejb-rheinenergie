@@ -8,9 +8,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.OrderBy;
 
 @Entity
-public class Betreiber extends AbstractEntity  {
-	
-	private String name;
+//@DiscriminatorValue("B")
+public class Betreiber extends Kontakt  {
 	
 	@OneToMany(mappedBy="betreiber")
 	@OrderBy(value="anlage.name")
@@ -27,15 +26,6 @@ public class Betreiber extends AbstractEntity  {
 		this.beziehungen = beziehungen;
 	}
 	
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
 	public Betreiber withName(String name) {
 		setName(name);
 		return this;
